@@ -68,6 +68,8 @@ volumes:[
         }else{
           println "Maven Build Passed"
         }
+        sh 'pwd'
+        sh 'ls -al'
       }
     }
   }
