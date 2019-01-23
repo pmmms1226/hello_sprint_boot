@@ -1,9 +1,10 @@
-podTemplate(label: 'jenkins-pipeline', containers: [
-    containerTemplate(name: 'maven', image: 'maven:3-jdk-8-alpine', command: 'cat', ttyEnabled: true),
-    containerTemplate(name: 'docker', image: 'docker:1.12', command: 'cat', ttyEnabled: true),
-    containerTemplate(name: 'helm', image: 'lachlanevenson/k8s-helm:v2.7.0', command: 'cat', ttyEnabled: true),
-    containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.9.3', command: 'cat', ttyEnabled: true)
-],
+podTemplate(label: 'jenkins-mvn', 
+// containers: [
+//     containerTemplate(name: 'maven', image: 'maven:3-jdk-8-alpine', command: 'cat', ttyEnabled: true),
+//     containerTemplate(name: 'docker', image: 'docker:1.12', command: 'cat', ttyEnabled: true),
+//     containerTemplate(name: 'helm', image: 'lachlanevenson/k8s-helm:v2.7.0', command: 'cat', ttyEnabled: true),
+//     containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.9.3', command: 'cat', ttyEnabled: true)
+// ],
 volumes:[
     hostPathVolume(mountPath: '/var/run/docker.sock'  , hostPath: '/var/run/docker.sock'),
     hostPathVolume(mountPath: '/root/.m2/repository'     , hostPath: '/root/.m2/repository')
@@ -12,7 +13,7 @@ volumes:[
     // persistentVolumeClaim(mountPath: '/home/jenkins/.m2', claimName: 'pvc-jenkins', readOnly: false)
 ]){
 
-  node ('jenkins-pipeline') {
+  node ('jenkins-mvn') {
 
     // User Custom Setting ////////////////////////////////////////////////////////////////////////////////////////////////
     def DEPLOY_TARGET = "alpha"
