@@ -34,27 +34,7 @@ volumes:[
 
     // Default Setting
     // https://github.com/settings/tokens
-    def KUBECONFIG_CONFIG_TOKEN = "f7efe9350775a502c9d76e7d751ef46c1547c30f"
-    def KUBECONFIG_CONFIG_URL = "https://raw.githubusercontent.com/cloudsvcdev/kubeconfig/master/config"
 
-    def KUBECONFIG_PEM_URL_DEV = "https://raw.githubusercontent.com/cloudsvcdev/kubeconfig/master/ca-seo01-zaction-dev.pem"
-    def KUBECONFIG_PEM_FILENAME_DEV = "ca-seo01-zaction-dev.pem"
-    
-    def KUBECONFIG_PEM_URL_ALPHA = "https://raw.githubusercontent.com/cloudsvcdev/kubeconfig/master/ca-seo01-zaction-alpha.pem"
-    def KUBECONFIG_PEM_FILENAME_ALPHA = "ca-seo01-zaction-alpha.pem"
-
-    def KUBECONFIG_PEM_URL_BETA = "https://raw.githubusercontent.com/cloudsvcdev/kubeconfig/master/ca-seo01-zaction-beta.pem"
-    def KUBECONFIG_PEM_FILENAME_BETA = "ca-seo01-zaction-beta.pem"
-
-    def KUBECONFIG_PEM_URL_PROD = "https://raw.githubusercontent.com/cloudsvcdev/kubeconfig/master/ca-seo01-zaction-prod.pem"
-    def KUBECONFIG_PEM_FILENAME_PROD = "ca-seo01-zaction-prod.pem"
-
-    def KUBECONFIG_PEM_URL = KUBECONFIG_PEM_URL_ALPHA
-    def KUBECONFIG_PEM_FILENAME = KUBECONFIG_PEM_FILENAME_ALPHA
-
-    def DOCKER_REGISTRY_URL = "harbor.dev.action.cloudz.co.kr"
-    def DOCKER_USERNAME = "admin"
-    def DOCKER_PASSWORD = "!Cloudev00"
 
     // checkout sources
     checkout scm
