@@ -6,7 +6,7 @@ podTemplate(label: 'jenkins-pipeline', containers: [
 ],
 volumes:[
     hostPathVolume(mountPath: '/var/run/docker.sock'  , hostPath: '/var/run/docker.sock'),
-    hostPathVolume(mountPath: '/home/jenkins/.m2'     , hostPath: '/root/.m2/repository')
+    hostPathVolume(mountPath: '/root/.m2/repository'     , hostPath: '/root/.m2/repository')
     // Warning  FailedMount            24s (x2 over 2m)  ibm/ibmc-block          Error while attaching the device pv pvc-5a57e682-877b-11e8-9eda-12f85c7c1293 cannot be attached to the node 10.178.188.28. Error: PV pvc-5a57e682-877b-11e8-9eda-12f85c7c1293 is already attached to another node 10.178.188.4
     // Warning  FailedMount            18s (x2 over 2m)  kubelet, 10.178.188.28  Unable to mount volumes for pod "jenkins-slave-t0jb4-3gbbc_jenkins(88d91a76-8f23-11e8-8bb2-2aef178dbc0e)": timeout expired waiting for volumes to attach/mount for pod "jenkins"/"jenkins-slave-t0jb4-3gbbc". list of unattached/unmounted volumes=[volume-1]
     // persistentVolumeClaim(mountPath: '/home/jenkins/.m2', claimName: 'pvc-jenkins', readOnly: false)
