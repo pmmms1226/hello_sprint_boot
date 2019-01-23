@@ -50,7 +50,7 @@ volumes:[
           println "Maven Build Passed"
         }
         sh 'pwd'
-        sh 'ls -al'
+        sh 'rm -f ./target'
       }
     }
   }
