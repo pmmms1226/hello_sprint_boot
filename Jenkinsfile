@@ -47,8 +47,7 @@ volumes:[
         }else{
           println "Maven Build Passed"
         }
-        sh "echo ${env.BRANCH_NAME}"
-        sh 'echo ${env.BUILD_NUMBER}'
+        println "${env.BRANCH_NAME}"
         sh 'pwd'
         sh 'rm -rf ./target'
         sh 'ls -al'
